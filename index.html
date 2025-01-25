@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic Drift</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: white;
+            color: #1a1a1a;
+        }
+        .quote-container {
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="bg-white text-black">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-6xl text-center mb-4 font-bold tracking-wide">Atomic Drift</h1>
+        <h2 class="text-2xl text-center mb-12 italic text-gray-600">Evolution never stops, why should you?</h2>
+        
+        <div class="flex flex-col md:flex-row gap-8 mb-12">
+    <div class="md:w-1/2">
+        <img src="003.gif" alt="Physics Concept" class="w-full h-auto">
+    </div>
+    <div class="md:w-1/2">
+        <h2 class="text-3xl mb-4 font-semibold">Cheat Codes For The Future</h2>
+        <p class="text-lg leading-relaxed mb-4">
+            In many ancient & medieval cultures, the idea of a standardised minimal education for an elite member of society was considered important. Whether it was the quadrivium in Europe, Paideia in Greece, the Four Arts of China, vedanga in India, Edubba in Mesopotamia…the curricula were responses to the state of the world at that time.
+        </p>
+
+        <p class="text-lg leading-relaxed mb-4">
+            The Four Arts of the Chinese scholar-gentleman are particularly interesting because of their specific priorities. They required mastery of a stringed musical instrument (guqin), the board game Go, calligraphy, and painting. The Six Arts learned by the 72 disciples of Confucius included archery, equestrianism, and most notably - mathematics.
+        </p>
+
+
+        <p class="text-lg leading-relaxed">
+            How would one construct an ideal curriculum that is essential to know in the year 2025?
+        </p>
+    </div>
+</div>
+
+        
+        <div class="mb-8">
+            <h3 class="text-2xl mb-4">Contents</h3>
+            <div class="flex space-x-4">
+                <a href="#quantum" class="hover:text-gray-600 transition">The Course</a>
+                <a href="#relativity" class="hover:text-gray-600 transition">Founder</a>
+                <a href="#chaos" class="hover:text-gray-600 transition">Registration</a>
+            </div>
+        </div>
+        
+        <div class="quote-container bg-gray-100 p-8 rounded-lg mb-12">
+            <div id="quote-display" class="text-center text-2xl"></div>
+        </div>
+        
+        <div id="content-sections">
+            <section id="quantum" class="mb-12">
+                <h3 class="text-3xl mb-4">Quantum Mechanics</h3>
+                <p class="text-lg">
+                    A realm where particles exist in probability, where observation transforms potential into reality. 
+                    Quantum mechanics challenges our classical understanding of the universe.
+                </p>
+            </section>
+            
+            <section id="relativity" class="mb-12">
+                <h3 class="text-3xl mb-4">Relativity</h3>
+                <p class="text-lg">
+                    Einstein's revolutionary framework that demonstrates how space, time, and gravity are intrinsically linked, 
+                    revealing a universe far more fluid and interconnected than we ever imagined.
+                </p>
+            </section>
+            
+            <section id="chaos" class="mb-12">
+                <h3 class="text-3xl mb-4">Chaos Theory</h3>
+                <p class="text-lg">
+                    A scientific theory describing how complex systems can produce seemingly random results, 
+                    where minute changes can lead to dramatically different outcomes.
+                </p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const quotes = [
+            "In nature's arithmetic, probability replaces certainty. - Werner Heisenberg",
+            "God does not play dice with the universe. - Albert Einstein",
+            "The universe is not only stranger than we imagine, it is stranger than we can imagine. - Sir Arthur Eddington",
+            "We are just an advanced breed of monkeys on a minor planet of a very average star. - Stephen Hawking"
+        ];
+
+        const quoteDisplay = document.getElementById('quote-display');
+
+        function displayRandomQuote() {
+            const quote = quotes[Math.floor(Math.random() * quotes.length)];
+            quoteDisplay.textContent = quote;
+            
+            anime({
+                targets: '#quote-display',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                duration: 1000,
+                easing: 'easeOutQuad'
+            });
+        }
+
+        displayRandomQuote();
+        setInterval(displayRandomQuote, 5000);
+    </script>
+</body>
+</html>
