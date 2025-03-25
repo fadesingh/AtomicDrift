@@ -1,50 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Atomic Drift</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      font-family: 'Georgia', serif;
-      color: white;
-      text-align: center;
       background: url('title.png') no-repeat center center fixed;
       background-size: cover;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      align-items: flex-end; /* Align button vertically */
+      justify-content: center; /* Center horizontally */
+      font-family: sans-serif;
     }
-    h1 {
-      font-size: 4em;
-      margin: 0.2em 0;
-    }
-    p {
-      font-size: 1.5em;
-      margin-bottom: 2em;
-    }
-    a.download-button {
-      padding: 0.8em 2em;
-      font-size: 1.2em;
+    .download-button {
+      margin-bottom: 5vh; /* Push it up slightly from bottom */
+      padding: 1em 2em;
+      font-size: 1.1em;
       color: white;
-      background-color: rgba(0,0,0,0.6);
-      border: 2px solid white;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 1px solid white;
       text-decoration: none;
-      transition: 0.3s;
+      border-radius: 5px;
+      transition: 0.3s ease;
     }
-    a.download-button:hover {
-      background-color: rgba(255,255,255,0.1);
+    .download-button:hover {
+      background-color: rgba(255, 255, 255, 0.15);
     }
   </style>
 </head>
 <body>
-  <h1>Atomic Drift</h1>
-  <p>Non-linear strategies for the apocalypse<br>(& other Tuesdays)</p>
-  <a href="AtomicDrift_Slideshow.pdf" class="download-button" download>
-    ↓ Download the Slideshow (PDF)
+  <a href="https://drive.google.com/file/d/1sHGCd5Giz7x52ccbrX_cPgzEvwymosx_/view?usp=sharing" class="download-button" download>
+    ↓ Download Slideshow (PDF)
   </a>
 </body>
 </html>
